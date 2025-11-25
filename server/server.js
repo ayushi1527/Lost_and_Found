@@ -13,10 +13,13 @@ const app = express();
 // ⭐ FIXED CORS (localhost + Vercel)
 app.use(
   cors({
+    // allow localhost, Vercel, Render or an explicit CLIENT_URL from env
     origin: [
+      process.env.CLIENT_URL,
       "http://localhost:5173",
-      "https://lost-and-found-weld.vercel.app"
-    ],
+      "https://lost-and-found-weld.vercel.app",
+      "https://lost-and-found-igdtuw.onrender.com"
+    ].filter(Boolean),
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
