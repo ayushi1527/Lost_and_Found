@@ -5,7 +5,6 @@ const api = axios.create({
   withCredentials: true,
 });
 
-
 // Attach Authorization header if token is present in localStorage
 api.interceptors.request.use(
   (config) => {
