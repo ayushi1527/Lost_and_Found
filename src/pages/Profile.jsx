@@ -205,14 +205,14 @@ export default function Profile() {
         {/* Buttons */}
         <div className="flex justify-center flex-wrap gap-4">
           <button
-            onClick={() => navigate("/my-items?type=lost")}
+            onClick={() => navigate("/lost-items")}
             className="px-6 py-2 bg-themeGreen text-white font-semibold rounded-lg shadow-md hover:bg-green-700"
           >
             View Lost Items
           </button>
 
           <button
-            onClick={() => navigate("/my-items?type=found")}
+            onClick={() => navigate("/found-items")}
             className="px-6 py-2 bg-themeGreen text-white font-semibold rounded-lg shadow-md hover:bg-green-700"
           >
             View Found Items
