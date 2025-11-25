@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://lost-and-found-igdtuw.onrender.com/api",
+  baseURL: import.meta.env.VITE_API_URL || "https://lost-and-found-igdtuw.onrender.com/api",
   withCredentials: true,
 });
 
