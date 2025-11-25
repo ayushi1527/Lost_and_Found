@@ -17,7 +17,7 @@ app.use(
     origin: [
       process.env.CLIENT_URL,
       "http://localhost:5173",
-      "https://lostandfoundigdtuw.netlify.app",   
+      "https://lostfound-igdtuw.netlify.app",   
       "https://lost-and-found-igdtuw.onrender.com"
     ].filter(Boolean),
     credentials: true,
