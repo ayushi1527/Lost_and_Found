@@ -43,7 +43,9 @@ function Login() {
     }
 
     try {
-      const res = await api.post("/auth/verify-otp", { email, otp });
+      const res = await api.post("/auth/verify-login", { email, otp });
+
+
 
       if (res.data.token) {
         localStorage.setItem("token", res.data.token);
