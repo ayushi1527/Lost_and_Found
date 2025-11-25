@@ -1,5 +1,5 @@
 // src/utils/api.js
-export const API_BASE = "https://lost-and-found-igdtuw.onrender.com/";
+export const API_BASE = "https://lost-and-found-igdtuw.onrender.com/api";
 
 export function apiUrl(path) {
   return `${API_BASE}${path}`;
