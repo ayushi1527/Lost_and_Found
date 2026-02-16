@@ -39,12 +39,12 @@ export default function ItemsList({ fixedType }) {
       params.set("page", String(page));
       params.set("limit", String(limit));
 
-      let url = `${API_BASE}/api/items?${params.toString()}`;
+      let url = `${API_BASE}/items?${params.toString()}`;
       let opts = { credentials: "include" };
 
       // if mineOnly, use /api/items/mine and include token if present
       if (mineOnly) {
-        url = `${API_BASE}/api/items/mine?${params.toString()}`;
+        url = `${API_BASE}/items/mine?${params.toString()}`;
         const token = localStorage.getItem("token");
         if (token) {
           opts = { headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" } };
