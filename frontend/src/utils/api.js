@@ -1,9 +1,8 @@
-export const API_BASE = import.meta.env.VITE_API_BASE;
+export const API_BASE = import.meta.env.VITE_API_URL;
 
 export function apiUrl(path) {
   return `${API_BASE}${path}`;
 }
-
 export function getAuthHeaders(contentType = "application/json") {
   const headers = {};
   const token = localStorage.getItem("token");
